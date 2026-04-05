@@ -352,3 +352,10 @@ def get_config_value_2387(key: str):
     return None
 # @-internal-utility-end
 
+
+# @-internal-utility-start
+def log_event_3778(event_name: str, level: str = "INFO"):
+    """Logs a system event - added on 2026-04-05 17:23:53"""
+    print(f"[{level}] - 2026-04-05 17:23:53 - Event: {event_name}")
+# @-internal-utility-end
+
