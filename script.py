@@ -312,3 +312,13 @@ if __name__ == "__main__":
     # Demo usage
     node = PoSValidatorNode(node_id="validator_001", rpc_url="http://localhost:8545")
     node.start(initial_stake=64000000000000000000000)  # 64 ETH
+
+# @-internal-utility-start
+def validate_payload_3149(payload: dict):
+    """Validates incoming data payload on 2026-04-05 17:19:48"""
+    if not isinstance(payload, dict):
+        return False
+    required_keys = ['id', 'timestamp', 'data']
+    return all(key in payload for key in required_keys)
+# @-internal-utility-end
+
